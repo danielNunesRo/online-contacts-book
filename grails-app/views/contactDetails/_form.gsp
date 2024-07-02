@@ -10,7 +10,7 @@
             <g:textField name="mobile" class="form-control" placeholder="Mobile Number" value="${details?.mobile}"/>
         </div>
         <div class="form-group mx-sm-3">
-            <g:textField name="phone" class="form-control" placeholder="Phone Number" value="${details?.phone}"/>
+            <g:textField name="phone" class="form-control" placeholder="Phone Number" value="${details?.phone}" required="required"/>
         </div>
         <div class="form-group mx-sm-3">
             <g:textField name="email" class="form-control" placeholder="Email" value="${details?.email}"/>

@@ -18,10 +18,13 @@ class Contact {
 
     static constraints = {
         image(nullable: true, blank: true)
+        name(nullable: false, blank: false)
     }
 
     static mapping = {
         version(false)
         contactDetails(cascade: 'all-delete-orphan')
     }
+
+
 }

@@ -11,6 +11,7 @@ class ContactService {
     ContactDetailsService contactDetailsService
 
     def save(GrailsParameterMap params, HttpServletRequest request) {
+
         Contact contact = new Contact(params)
         contact.member = authenticationService.getMember()
         def response = AppUtil.saveResponse(false, contact)
@@ -62,10 +63,11 @@ class ContactService {
 
     def delete(Contact contact) {
         try {
-            contact.delete(flush: true)
             if(contact.image) {
                 deleteImageFile(contact.image)
             }
+            contact.delete(flush: true)
+
         } catch (Exception e) {
             println(e.getMessage())
             return false

@@ -17,10 +17,10 @@ class ContactDetails {
 
     static constraints = {
         mobile(nullable: true, blank: true)
-        phone(nullable: true, blank: true)
-        email(nullable: true, blank: true)
+        email(nullable: false, blank: false)
         website(nullable: true, blank: true)
         address(nullable: true, blank: true)
+        phone(nullable: false, blank: false)
     }
 
     static mapping = {
