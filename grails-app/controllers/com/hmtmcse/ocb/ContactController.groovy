@@ -12,9 +12,9 @@ class ContactController {
     def details(Integer id) {
         def response = contactService.get(id)
         if (!response){
-            redirect(controller: "contact", action: "index")
+            redirect(controller: "contact", action: "details")
         }else{
-            [contact: response]
+            redirect(action: "showContactDetails", controller: "contactDetails", params: [id: id])
         }
     }
 
